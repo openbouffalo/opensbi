@@ -10,6 +10,9 @@
 libsbiutils-objs-$(CONFIG_FDT_SERIAL) += serial/fdt_serial.o
 libsbiutils-objs-$(CONFIG_FDT_SERIAL) += serial/fdt_serial_drivers.o
 
+carray-fdt_serial_drivers-$(CONFIG_FDT_SERIAL_BFLB) += fdt_serial_bflb
+libsbiutils-objs-$(CONFIG_FDT_SERIAL_BFLB) += serial/fdt_serial_bflb.o
+
 carray-fdt_serial_drivers-$(CONFIG_FDT_SERIAL_CADENCE) += fdt_serial_cadence
 libsbiutils-objs-$(CONFIG_FDT_SERIAL_CADENCE) += serial/fdt_serial_cadence.o
 
@@ -37,6 +40,7 @@ libsbiutils-objs-$(CONFIG_FDT_SERIAL_UART8250) += serial/fdt_serial_uart8250.o
 carray-fdt_serial_drivers-$(CONFIG_FDT_SERIAL_XILINX_UARTLITE) += fdt_serial_xlnx_uartlite
 libsbiutils-objs-$(CONFIG_FDT_SERIAL_XILINX_UARTLITE) += serial/fdt_serial_xlnx_uartlite.o
 
+libsbiutils-objs-$(CONFIG_SERIAL_BFLB) += serial/bflb-uart.o
 libsbiutils-objs-$(CONFIG_SERIAL_CADENCE) += serial/cadence-uart.o
 libsbiutils-objs-$(CONFIG_SERIAL_GAISLER) += serial/gaisler-uart.o
 libsbiutils-objs-$(CONFIG_SERIAL_RENESAS_SCIF) += serial/renesas_scif.o
